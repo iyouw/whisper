@@ -16,16 +16,17 @@
   "homepage": "https://github.com/iyouw/whisper#readme",
   "scripts": {
     "prepare": "husky install",
-    "clean":"pnpm --filter @whisper/* clean"
+    "clean": "pnpm --filter @whisper/* clean"
   },
   "devDependencies": {
-    "@whisper/eslint-config":"workspace:*",
-    "@whisper/stylelint-config":"workspace:*",
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
+    "@whisper/eslint-config": "workspace:*",
+    "@whisper/stylelint-config": "workspace:*",
     "eslint": "^8.22.0",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
+    "postcss": "^8.4.16",
     "prettier": "^2.7.1",
     "rimraf": "^3.0.2",
     "stylelint": "^14.10.0",
