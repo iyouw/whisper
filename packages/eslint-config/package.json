@@ -1,0 +1,29 @@
+{
+  "name": "@whisper/eslint-config",
+  "version": "1.0.0",
+  "description": "whisper eslint config",
+  "main": "index.js",
+  "keywords": [
+    "whisper-eslint-config"
+  ],
+  "author": "whisper",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf node_modules"
+  },
+  "peerDependencies": {
+    "eslint": ">=7.0.0",
+    "prettier": ">=2.0.0",
+    "typescript": ">=2.8.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.33.1",
+    "@typescript-eslint/parser": "^5.33.1",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-typescript": "^3.4.1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.3.0"
+  }
+}

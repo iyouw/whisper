@@ -1,0 +1,87 @@
+module.exports = {
+  parser: "vue-eslint-parser",
+  parserOptions: {
+    parser: "@typescript-eslint/parser",
+    sourceType: "module",
+    ecmaVersion: 2020,
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
+  env: {
+    browser: true,
+    node: true,
+    es6: true,
+  },
+  plugins: ["@typescript-eslint"],
+  extends: [
+    "airbnb-base",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/recommended",
+    "plugin:import/typescript",
+    "plugin:vue/vue3-recommended",
+    "plugin:prettier/recommended",
+  ],
+  settings: {
+    "import/resolver": {
+      typescript: {
+        project: "./tsconfig.json",
+      },
+    },
+  },
+  rules: {
+    "prettier/prettier": "warn",
+    // base
+    "no-underscore-dangle": "off",
+    "no-nested-ternary": "off",
+    "no-shadow": "off",
+    "prefer-template": "warn",
+    "no-param-reassign": "off",
+    "no-plusplus": "off",
+    "no-use-before-define": "off",
+    "no-restricted-syntax": "off",
+    "no-empty": ["error", { allowEmptyCatch: true }],
+    "no-bitwise": "off",
+    "no-return-assign": "off",
+    "no-unused-expressions": [
+      "error",
+      { allowShortCircuit: true, allowTernary: true },
+    ],
+    "no-continue": "off",
+    "no-console": "off",
+    "prefer-regex-literals": "warn",
+    "no-await-in-loop": "warn",
+    "no-prototype-builtins": "warn",
+    "no-promise-executor-return": "warn",
+    "no-restricted-exports": "warn",
+    // eslint-plugin-vue
+    "vue/no-v-html": "off",
+    "vue/require-default-prop": "off",
+    "vue/singleline-html-element-content-newline": "off",
+    "vue/max-attributes-per-line": "off",
+    "vue/html-self-closing": "off",
+    "vue/multi-word-component-names": "off",
+    "vue/no-unused-components": "off",
+    "vue/no-reserved-props": "warn",
+    "vue/no-reserved-component-names": "warn",
+    // typescript-eslint
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    // eslint-plugin-import
+    "import/order": "off",
+    "import/extensions": [
+      "warn",
+      "ignorePackages",
+      { js: "never", jsx: "never", ts: "never", tsx: "never" },
+    ],
+    "import/no-extraneous-dependencies": "off",
+    "import/no-unresolved": ["warn", { caseSensitive: false }],
+    "import/prefer-default-export": "off",
+    "import/no-named-as-default": "off",
+  },
+};
