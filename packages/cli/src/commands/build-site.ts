@@ -1,3 +1,1 @@
-export async function buildSite(): Promise<void> {
-  
-}
+export async function buildSite(): Promise<void> {}

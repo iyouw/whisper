@@ -1,3 +1,1 @@
-export async function devSite(): Promise<void> {
-  
-}
+export async function devSite(): Promise<void> {}

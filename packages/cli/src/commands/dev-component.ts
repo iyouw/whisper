@@ -1,3 +1,1 @@
-export async function devComponent(): Promise<void> {
-  
-}
+export async function devComponent(): Promise<void> {}

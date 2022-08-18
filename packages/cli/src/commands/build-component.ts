@@ -1,3 +1,1 @@
-export async function buildComponent(): Promise<void> {
-  
-}
+export async function buildComponent(): Promise<void> {}

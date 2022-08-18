@@ -1,3 +1,1 @@
-export function genEntry(): void {
-
-}
+export function genEntry(): void {}

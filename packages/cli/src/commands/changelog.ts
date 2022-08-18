@@ -1,3 +1,1 @@
-export async function changelog(): Promise<void> {
-  
-}
+export async function changelog(): Promise<void> {}

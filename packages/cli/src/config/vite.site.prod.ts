@@ -1,5 +1,3 @@
-import { defineConfig, InlineConfig } from 'vite'
+import { defineConfig, InlineConfig } from 'vite';
 
-export default defineConfig({
-
-}) as InlineConfig;
+export default defineConfig({}) as InlineConfig;
