@@ -1,6 +1,6 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
 
-const routes: Readonly<RouteRecordRaw[]> = [];
+import { routes } from './routes/index.js';
 
 const router = createRouter({
   history: createWebHistory(),

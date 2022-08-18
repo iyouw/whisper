@@ -4,8 +4,7 @@
   "version": "1.0.0",
   "description": "whisper monorespository",
   "workspaces": [
-    "packages/*",
-    "utils"
+    "packages/*"
   ],
   "repository": {
     "type": "git",
