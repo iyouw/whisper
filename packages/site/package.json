@@ -9,7 +9,7 @@
   "author": "whisper",
   "license": "MIT",
   "scripts": {
-    "dev":"whisper-cli site:dev"
+    "dev": "whisper-cli site:dev"
   },
   "dependencies": {
     "@whisper/starry": "^1.0.0",

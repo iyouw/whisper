@@ -19,6 +19,7 @@
   "homepage": "https://github.com/iyouw/whisper#readme",
   "scripts": {
     "prepare": "husky install",
+    "start":"npm run dev -w packages/site",
     "clean": "rimraf -g **/{node_modules,dist,es,lib}"
   },
   "devDependencies": {
