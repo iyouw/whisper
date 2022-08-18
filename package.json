@@ -3,6 +3,7 @@
   "name": "whisper",
   "version": "1.0.0",
   "description": "whisper monorespository",
+  "workspaces":["./packages/*"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/iyouw/whisper.git"
