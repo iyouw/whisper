@@ -3,6 +3,10 @@
   "name": "whisper",
   "version": "1.0.0",
   "description": "whisper monorespository",
+  "workspaces": [
+    "packages/*",
+    "utils"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/iyouw/whisper.git"
@@ -16,19 +20,18 @@
   "homepage": "https://github.com/iyouw/whisper#readme",
   "scripts": {
     "prepare": "husky install",
-    "clean": "pnpm --filter @whisper/* clean"
+    "clean": "rimraf -g **/{node_modules,dist,es,lib}"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
-    "@whisper/eslint-config": "workspace:*",
-    "@whisper/stylelint-config": "workspace:*",
+    "@whisper/eslint-config": "^1.0.0",
+    "@whisper/stylelint-config": "^1.0.0",
     "eslint": "^8.22.0",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "postcss": "^8.4.16",
     "prettier": "^2.7.1",
-    "rimraf": "^3.0.2",
     "stylelint": "^14.10.0",
     "typescript": "^4.7.4"
   },

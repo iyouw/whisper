@@ -16,10 +16,8 @@
     "node": ">=14.0.0"
   },
   "scripts": {
-    "prepare": "pnpm build",
     "dev": "tsc --watch",
-    "build": "tsc",
-    "clean": "rimraf node_modules && rimraf dist"
+    "build": "tsc"
   },
   "dependencies": {
     "commander": "^9.4.0",

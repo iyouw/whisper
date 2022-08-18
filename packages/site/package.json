@@ -8,15 +8,12 @@
   ],
   "author": "whisper",
   "license": "MIT",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "dependencies": {
-    "@whisper/starry":"workspace:*",
+    "@whisper/starry":"^1.0.0",
     "vue": "^3.2.37",
     "vue-router": "^4.1.3"
   },
   "devDependencies": {
-    "@whisper/cli":"workspace:*"
+    "@whisper/cli":"^1.0.0"
   }
 }

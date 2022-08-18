@@ -1,0 +1,9 @@
+{
+  "name": "@whisper/utils",
+  "version": "1.0.0",
+  "description": "whisper utils",
+  "main": "dist/index.js",
+  "keywords": ["whisper-utils"],
+  "author": "whisper",
+  "license": "MIT"
+}
