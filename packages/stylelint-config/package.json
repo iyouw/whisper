@@ -8,9 +8,6 @@
   ],
   "author": "whisper",
   "license": "MIT",
-  "scripts": {
-    "clean": "rimraf node_modules"
-  },
   "peerDependencies": {
     "stylelint": ">=11.10.0",
     "postcss":">=8.3.3"

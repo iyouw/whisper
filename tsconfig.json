@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "strict": true,
-    "baseUrl": ".",
     "target": "ES2015",
     "module": "ESNext",
     "isolatedModules": true,
@@ -9,6 +8,8 @@
     "esModuleInterop": true,
     "moduleResolution": "node",
     "removeComments": true,
+    "sourceMap": true,
+    "declaration": true,
     "lib": ["ESNext","DOM",],
     "jsx": "preserve"
   }

@@ -1,3 +1,3 @@
 <template>
-  <div>home </div>
+  <div>hello from whisper cli</div>
 </template>

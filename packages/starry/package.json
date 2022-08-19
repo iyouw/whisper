@@ -5,8 +5,5 @@
   "main": "dist/index.js",
   "keywords": ["dist,lib,es"],
   "author": "whisper",
-  "license": "MIT",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  }
+  "license": "MIT"
 }
