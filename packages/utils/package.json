@@ -5,5 +5,10 @@
   "main": "dist/index.js",
   "keywords": ["whisper-utils"],
   "author": "whisper",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "prepare":"npm run build",
+    "dev": "tsc --watch",
+    "build": "tsc"
+  }
 }
