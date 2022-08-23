@@ -3,10 +3,20 @@
   "version": "1.0.0",
   "description": "whisper markdown parser for vite",
   "main": "dist/index.js",
-  "keywords": ["whisper-vite-plugin-markdown"],
+  "keywords": [
+    "whisper-vite-plugin-markdown"
+  ],
   "author": "whisper",
   "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "tsc --watch",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "marked": "^4.0.19",
+    "vite": "^3.0.9"
+  },
+  "devDependencies": {
+    "@types/marked": "^4.0.6"
   }
 }
