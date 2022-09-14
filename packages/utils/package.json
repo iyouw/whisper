@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "whisper utils",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "keywords": ["whisper-utils"],
   "author": "whisper",
   "license": "MIT",

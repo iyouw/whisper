@@ -1,6 +1,6 @@
 {
   "name": "@whisper/cli",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "whisper cli",
   "main": "dist/index.js",
   "type": "module",
@@ -21,7 +21,6 @@
     "build": "tsc"
   },
   "dependencies": {
-    "@types/glob": "^7.2.0",
     "@vitejs/plugin-vue": "^3.0.3",
     "@vitejs/plugin-vue-jsx": "^2.0.0",
     "commander": "^9.4.0",
@@ -30,6 +29,7 @@
     "sass": "^1.54.4"
   },
   "devDependencies": {
-    "@types/node": "^18.7.6"
+    "@types/node": "^18.7.6",
+    "@types/glob": "^7.2.0"
   }
 }

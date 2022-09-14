@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "whisper file system",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "type": "module",
   "keywords": [
     "whisper-fs"

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "whisper markdown parser for vite",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "keywords": [
     "whisper-vite-plugin-markdown"
   ],

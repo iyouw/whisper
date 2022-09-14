@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "whisper starry, a vue next ui components",
   "main": "dist/index.js",
+  "types": "es/indes.d.ts",
   "keywords": ["dist,lib,es"],
   "author": "whisper",
   "license": "MIT"
