@@ -1,0 +1,9 @@
+{
+  "name": "@whisper/style-standard",
+  "version": "0.0.1",
+  "description": "whisper style standard",
+  "main": "index.scss",
+  "keywords": ["whisper style standard"],
+  "author": "whisper",
+  "license": "MIT"
+}
