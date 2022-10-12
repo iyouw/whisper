@@ -21,7 +21,7 @@ program
   .argument('<glob>', 'files to be replace')
   .option('-p,--pattern <regex>', 'search value')
   .option('-r, --replacer <string>', 'replacer')
-  .option('-a, --all <boolean>', 'replace all')
+  .option('-a, --all', 'replace all')
   .action(async (src, { pattern, replacer, all }) => {
     await replace(src, pattern, replacer, all);
   });
