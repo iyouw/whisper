@@ -7,9 +7,7 @@ import process from 'process';
 import { replace } from './index.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const pkg = JSON.parse(
-  readFileSync(join(__dirname, '../package.json'), 'utf-8')
-);
+const pkg = JSON.parse(readFileSync(join(__dirname, '../package.json'), 'utf-8'));
 
 const program = new Command();
 
@@ -22,8 +20,9 @@ program
   .option('-p,--pattern <regex>', 'search value')
   .option('-r, --replacer <string>', 'replacer')
   .option('-a, --all', 'replace all')
-  .action(async (src, { pattern, replacer, all }) => {
-    await replace(src, pattern, replacer, all);
+  .option('-e, --escape', 'escape patten regex meta chars')
+  .action(async (src, { pattern, replacer, all, escape }) => {
+    await replace(src, pattern, replacer, all, escape);
   });
 
 program.parse(process.argv);
