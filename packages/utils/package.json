@@ -8,7 +8,6 @@
   "author": "whisper",
   "license": "MIT",
   "scripts": {
-    "prepare":"npm run build",
     "dev": "tsc --watch",
     "build": "tsc"
   }
