@@ -3,14 +3,15 @@
   "version": "0.0.1",
   "description": "whisper cli",
   "main": "dist/index.js",
-  "type": "module",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "keywords": [
     "whisper-cli"
   ],
   "author": "whisper",
   "license": "MIT",
   "bin": {
-    "whisper-cli": "bin.js"
+    "whisper": "bin.js"
   },
   "engines": {
     "node": ">=14.0.0"
@@ -23,12 +24,13 @@
     "@vitejs/plugin-vue": "^3.0.3",
     "@vitejs/plugin-vue-jsx": "^2.0.0",
     "commander": "^9.4.0",
+    "esbuild": "^0.15.13",
     "glob": "^8.0.3",
-    "vite": "^3.0.8",
-    "sass": "^1.54.4"
+    "sass": "^1.54.4",
+    "vite": "^3.0.8"
   },
   "devDependencies": {
-    "@types/node": "^18.7.6",
-    "@types/glob": "^7.2.0"
+    "@types/glob": "^7.2.0",
+    "@types/node": "^18.7.6"
   }
 }
