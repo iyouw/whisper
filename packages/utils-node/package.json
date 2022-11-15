@@ -14,7 +14,9 @@
   },
   "scripts": {
     "dev": "",
-    "build": ""
+    "build": "pnpm clean && pnpm build:bundle && pnpm build:types",
+    "build:types": "tsc -p ./tsconfig.json --emitDeclarationOnly",
+    "build:bundle": "node scripts/build.mjs"
   },
   "dependencies": {
     "commander": "^9.4.0",

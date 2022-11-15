@@ -1,19 +1,18 @@
 {
-  "name": "@whisper/utils",
+  "name": "@whisper/utils-wasm",
   "version": "0.0.1",
-  "description": "whisper utils",
+  "description": "whisper utils for web assembly",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
-  "keywords": ["whisper","whisper utils"],
-  "author": "whisper",
+  "keywords": ["whisper","whisper webassembly utils"],
+  "author": "",
   "license": "MIT",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public"
   },
   "scripts": {
-    "dev": "tsc --watch",
     "build": "pnpm clean && pnpm build:bundle && pnpm build:types",
     "build:types": "tsc -p ./tsconfig.json --emitDeclarationOnly",
     "build:bundle": "node scripts/build.mjs"

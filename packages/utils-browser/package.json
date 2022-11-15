@@ -13,6 +13,8 @@
   "author": "whisper",
   "license": "MIT",
   "scripts": {
-    "build": ""
+    "build": "pnpm clean && pnpm build:bundle && pnpm build:types",
+    "build:types": "tsc -p ./tsconfig.json --emitDeclarationOnly",
+    "build:bundle": "node scripts/build.mjs"
   }
 }
