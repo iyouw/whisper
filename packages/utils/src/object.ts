@@ -1,40 +1,32 @@
-import { isNumber, isSymbol } from './is.js';
+import { isNumber, isObject, isSymbol } from './is';
+import { mergeArrayWithDedupe } from './array';
 
-export const combinePath = (delimiter = '.', ...path: Array<string>): string =>
-  path.join(delimiter);
+export type ObjectKey = string | number | symbol;
 
-export const getKeyByPath = (
-  path?: string,
-  delimiter = '.'
-): string | undefined => {
+export type ObjectKeyPath = ObjectKey;
+
+export const KEY_DELIMITER = '.';
+
+export const combinePath = (...path: Array<string>): string => path.join(KEY_DELIMITER);
+
+export const getKeyByPath = (path?: string): string | undefined => {
   if (!path) return undefined;
-  const lastDelimiterIndex = path.lastIndexOf(delimiter);
-  return lastDelimiterIndex === -1
-    ? path
-    : path.substring(lastDelimiterIndex + 1);
+  const lastDelimiterIndex = path.lastIndexOf(KEY_DELIMITER);
+  return lastDelimiterIndex === -1 ? path : path.substring(lastDelimiterIndex + 1);
 };
 
-export const getParentKeyByPath = (
-  path?: string,
-  delimiter = '.'
-): string | undefined => {
+export const getParentKeyByPath = (path?: string): string | undefined => {
   if (!path) return undefined;
-  const lastDelimiterIndex = path.lastIndexOf(delimiter);
-  return lastDelimiterIndex === -1
-    ? undefined
-    : path.substring(0, lastDelimiterIndex);
+  const lastDelimiterIndex = path.lastIndexOf(KEY_DELIMITER);
+  return lastDelimiterIndex === -1 ? undefined : path.substring(0, lastDelimiterIndex);
 };
 
-export const getValueByPath = (
-  data: Record<string | number | symbol, any>,
-  path: string | number | symbol,
-  delimiter = '.'
-): any => {
+export const getValueByPath = (data: Record<ObjectKey, any>, path: ObjectKeyPath): any => {
   if (isNumber(path) || isSymbol(path)) {
     return data[path];
   }
 
-  const keys: string[] = path.split(delimiter);
+  const keys: string[] = path.split(KEY_DELIMITER);
   let i = 0;
   let res: any = data[keys[i++]];
   while (!!res && i < keys.length) {
@@ -43,19 +35,13 @@ export const getValueByPath = (
   return res;
 };
 
-export const setValueByPath = (
-  data: Record<string | number | symbol, any>,
-  path: string | number | symbol,
-  value: any,
-  force = true,
-  delimiter = '.'
-): boolean => {
+export const setValueByPath = (data: Record<ObjectKey, any>, path: ObjectKeyPath, value: any, force = true): boolean => {
   if (isNumber(path) || isSymbol(path)) {
     data[path] = value;
     return true;
   }
 
-  const keys = path.split(delimiter);
+  const keys = path.split(KEY_DELIMITER);
   let i = 0;
   let res = data;
   while (i < keys.length - 1) {
@@ -67,4 +53,21 @@ export const setValueByPath = (
   }
   res[keys[i]] = value;
   return true;
+};
+
+export const deepMerge = (target: Record<ObjectKey, any>, obj: Record<ObjectKey, any>): Record<ObjectKey, any> => {
+  for (const key of Object.keys(obj)) {
+    const oldVal = target[key];
+    const newVal = obj[key];
+
+    if (Array.isArray(oldVal) && Array.isArray(newVal)) {
+      target[key] = mergeArrayWithDedupe(oldVal, newVal);
+    } else if (isObject(oldVal) && isObject(newVal)) {
+      target[key] = deepMerge(oldVal, newVal);
+    } else {
+      target[key] = newVal;
+    }
+  }
+
+  return target;
 };

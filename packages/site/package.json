@@ -1,4 +1,5 @@
 {
+  "private": true,
   "name": "@whisper/site",
   "version": "1.0.0",
   "description": "whisper site",

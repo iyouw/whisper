@@ -43,10 +43,7 @@ module.exports = {
     'no-empty': ['error', { allowEmptyCatch: true }],
     'no-bitwise': 'off',
     'no-return-assign': 'off',
-    'no-unused-expressions': [
-      'error',
-      { allowShortCircuit: true, allowTernary: true },
-    ],
+    'no-unused-expressions': ['error', { allowShortCircuit: true, allowTernary: true }],
     'no-continue': 'off',
     'no-console': 'warn',
     'no-useless-constructor': 'off',
@@ -73,13 +70,10 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': 'off',
     '@typescript-eslint/no-empty-function': 'off',
     '@typescript-eslint/no-var-requires': 'off',
+    '@typescript-eslint/no-empty-interface': 'off',
     // eslint-plugin-import
     'import/order': 'off',
-    'import/extensions': [
-      'warn',
-      'ignorePackages',
-      { js: 'never', jsx: 'never', ts: 'never', tsx: 'never' },
-    ],
+    'import/extensions': ['warn', 'ignorePackages', { js: 'never', jsx: 'never', ts: 'never', tsx: 'never' }],
     'import/no-extraneous-dependencies': 'off',
     'import/no-unresolved': ['warn', { caseSensitive: false }],
     'import/prefer-default-export': 'off',

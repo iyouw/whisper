@@ -1,4 +1,4 @@
-export interface InterRect {
+export interface IRect {
   top: number;
   bottom: number;
   left: number;
@@ -8,15 +8,9 @@ export interface InterRect {
 }
 
 export const getScrollBarWidth = (el: HTMLElement): number =>
-  el.tagName === 'BODY'
-    ? window.innerWidth -
-      (document.documentElement.offsetWidth || document.body.offsetWidth)
-    : el.offsetWidth - el.clientWidth;
+  el.tagName === 'BODY' ? window.innerWidth - (document.documentElement.offsetWidth || document.body.offsetWidth) : el.offsetWidth - el.clientWidth;
 
-export const getRelativeRect = (
-  target: HTMLElement,
-  relative: HTMLElement
-): InterRect => {
+export const getRelativeRect = (target: HTMLElement, relative: HTMLElement): IRect => {
   const targetRect = target.getBoundingClientRect();
   const relativeRect = relative.getBoundingClientRect();
 

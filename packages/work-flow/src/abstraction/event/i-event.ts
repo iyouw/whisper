@@ -1,5 +1,7 @@
 export interface IEvent {
-  type: string;
-  target?: unknown;
-  path?: Array<unknown>;
+  readonly type: string;
+  readonly target: unknown;
+  readonly path: Array<unknown>;
+
+  addPath(target: unknown): IEvent;
 }

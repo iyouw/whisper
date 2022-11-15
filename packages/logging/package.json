@@ -1,19 +1,18 @@
 {
-  "name": "@whisper/utils",
+  "name": "@whisper/logging",
   "version": "0.0.1",
-  "description": "whisper utils",
+  "description": "whisper logging",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
-  "keywords": ["whisper","whisper utils"],
+  "scripts": {
+    "build":""
+  },
+  "keywords": ["whisper","whisper logging"],
   "author": "whisper",
   "license": "MIT",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public"
-  },
-  "scripts": {
-    "dev": "tsc --watch",
-    "build": "tsc"
   }
 }

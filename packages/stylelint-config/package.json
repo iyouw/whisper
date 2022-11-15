@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "description": "whisper stylelint config",
   "main": "index.js",
-  "keywords": [
-    "whisper-stylelint-config"
-  ],
+  "keywords": ["whisper","whisper stylelint config"],
   "author": "whisper",
   "license": "MIT",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
   "peerDependencies": {
     "stylelint": ">=11.10.0",
     "postcss":">=8.3.3"

@@ -1,2 +1,5 @@
-export * from './is.js';
-export * from './string.js';
+export * from './is';
+export * from './string';
+export * from './array';
+export * from './object';
+export * from './enum';

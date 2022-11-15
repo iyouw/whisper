@@ -1,41 +1,25 @@
-const { toString } = Object.prototype;
+export const getType = (value: any): string => Object.prototype.toString.call(value);
 
-export function isNull(value: any): value is null {
-  return toString.call(value) === '[object Null]';
-}
+export const isNull = (value: any): value is null => getType(value) === '[object Null]';
 
-export function isUndefined(value: any): value is undefined {
-  return toString.call(value) === '[object Undefined]';
-}
+export const isUndefined = (value: any): value is undefined => getType(value) === '[object Undefined]';
 
-export function isBoolean(value: any): value is boolean {
-  return toString.call(value) === '[object Boolean]';
-}
+export const isBoolean = (value: any): value is boolean => getType(value) === '[object Boolean]';
 
-export function isNumber(value: any): value is number {
-  return toString.call(value) === '[object Number]';
-}
+export const isNumber = (value: any): value is number => getType(value) === '[object Number]';
 
-export function isString(value: any): value is string {
-  return toString.call(value) === '[object String]';
-}
+export const isString = (value: any): value is string => getType(value) === '[object String]';
 
-export function isArray<T>(value: any): value is Array<T> {
-  return toString.call(value) === '[object Array]';
-}
+export const isArray = <T>(value: any): value is Array<T> => getType(value) === '[object Array]';
 
-export function isObject(value: any): value is Record<string, unknown> {
-  return toString.call(value) === '[object Object]';
-}
+export const isObject = (value: any): value is Record<string, any> => getType(value) === '[object Object]';
 
-export function isPromise<T>(value: any): value is Promise<T> {
-  return toString.call(value) === '[object Promise]';
-}
+export const isPromise = <T>(value: any): value is Promise<T> => getType(value) === '[object Promise]';
 
-export function isRegExp(value: any): value is RegExp {
-  return toString.call(value) === '[object RegExp]';
-}
+export const isRegExp = (value: any): value is RegExp => getType(value) === '[object RegExp]';
 
-export function isDate(value: any): value is Date {
-  return toString.call(value) === '[object Date]';
-}
+export const isDate = (value: any): value is Date => getType(value) === '[object Date]';
+
+export const isSymbol = (value: any): value is symbol => getType(value) === '[object Symbol]';
+
+export const isFunction = (value: any): value is CallableFunction => getType(value) === '[object Function]';
