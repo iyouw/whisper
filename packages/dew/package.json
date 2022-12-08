@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "whisper frontend containerize image base",
   "main": "src/index.js",
+  "type": "module",
   "keywords": [
     "whisper containerize",
     "docker"
