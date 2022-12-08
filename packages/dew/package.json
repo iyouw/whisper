@@ -1,0 +1,23 @@
+{
+  "name": "@whisper/dew",
+  "version": "0.0.0",
+  "description": "whisper frontend containerize image base",
+  "main": "src/index.js",
+  "keywords": [
+    "whisper containerize",
+    "docker"
+  ],
+  "author": "whisper",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc"
+  }
+}

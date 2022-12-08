@@ -1,0 +1,24 @@
+{
+  "name": "@whisper/configuration",
+  "version": "0.0.0",
+  "description": "whisper configuration",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "keywords": [
+    "whisper configuration"
+  ],
+  "author": "whisper",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc"
+  }
+}
