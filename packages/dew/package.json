@@ -20,5 +20,12 @@
   "scripts": {
     "dev": "tsc --watch",
     "build": "tsc"
+  },
+  "dependencies": {
+    "connect": "^3.7.0",
+    "connect-history-api-fallback": "^2.0.0",
+    "nacos": "^2.5.1",
+    "node-html-parser": "^6.1.4",
+    "serve-static": "^1.15.0"
   }
 }
