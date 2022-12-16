@@ -1,0 +1,31 @@
+{
+  "name": "@whisper/hosting",
+  "version": "0.0.0",
+  "description": "whisper hosting",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "keywords": [
+    "whisper hosting"
+  ],
+  "author": "whisper",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "inversify": "^6.0.1",
+    "pinia": "^2.0.28",
+    "reflect-metadata": "^0.1.13",
+    "vue": "^3.2.37",
+    "vue-router": "^4.1.3"
+  }
+}
